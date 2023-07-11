@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+     /* background-color: burlywood; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main img{
+    height: 700px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+    width: 500px;
+}
+
+.scroll-div{
+    position: absolute;
+    top:20%;
+    width: 100%;
+    /* height: 100px; */
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+.scroll-div::-webkit-scrollbar{
+    display:none;
+}
+.scroll-div h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    margin-right:30px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.scroll-div2{
+    position: absolute;
+    top:40%;
+    width: 100%;
+    /* height: 100px; */
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 100;
+}
+.scroll-div2::-webkit-scrollbar{
+    display:none;
+}
+.scroll-div2 h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    margin-right:30px;
+    letter-spacing: 4px;
+    -webkit-text-stroke-width:2px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.scroll-div3{
+    position: absolute;
+    top:60%;
+    width: 100%;
+    /* height: 100px; */
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scroll-div3::-webkit-scrollbar{
+    display:none;
+}
+.scroll-div3 h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family:'Courier New', Courier, monospace;
+    margin-right:30px;
+    letter-spacing: 4px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+.text{
+    font-size: 15px;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    width:40%;
+    z-index: 99;
+    top: 4%;
+    text-align: center;
+    font-weight:bolder;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+ 
+@keyframes scroll {
+    0%{
+        transform: translateX(calc(-100% - 32%));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@media (min-width:700px){
+    .text{
+        font-size:14px;
+        width: 65%;
+        top: 3px;
+    }
+    .main img{
+        height:660px;
+        object-fit:none;
+    }
+    
+}
+
+@media (max-width:900px) {
+    .text{
+        font-size:14px;
+        width: 70%;
+        top: 3px;
+    }
+    .main img{
+        height:660px;
+        object-fit:none;
+    }
+    
+}
+
+@media (min-width:300px) and (max-width:600px) {
+   .text{
+    font-size: 12px;
+    width: 100%;
+    font-weight:2000px;
+
+    }
+    .main img{
+        height: 660px;
+        width: 600px;
+        object-fit: cover;
+        z-index: -99;
+        
+    } 
+
+    @keyframes scroll {
+        0%{
+            transform:none;
+        }
+        100%{
+            transform:none;
+        }
+    }
+
+    .scroll-div h1{
+        font-size: 100px;
+        overflow: hidden;
+        padding-top:55%;
+        margin-left: 10%; 
+    }
+
+    .scroll-div2 h1{
+        font-size: 100px;
+        overflow: hidden;
+        padding-top:43%;
+        margin-left: 10%;
+    }
+
+    .scroll-div3 h1{
+        font-size: 100px;
+        overflow: hidden;
+        margin-top: 30%;
+        margin-left:10%; 
+
+    }
+}
+
